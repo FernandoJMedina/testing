@@ -15,16 +15,27 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSFaceIDUsageDescription": "Autorizar el uso de FaceID para continuar con el proceso de autenticación"
+      },
+      "bundleIdentifier": "com.ferjmedinadev.testingfeatures",
+      "buildNumber": "3"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.ferjmedinadev.testingfeatures"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "6f7f65f7-f161-4a2e-8af7-f4a3c7d645a1"
+      }
     }
   }
 }
