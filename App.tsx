@@ -4,7 +4,13 @@ import Notification from "./screens/Notification";
 import Biometrics from "./screens/Biometrics";
 import Home from "./screens/Home";
 
-const Stack = createNativeStackNavigator();
+export type RootStack = {
+  Home: undefined;
+  Notification: undefined;
+  Biometrics: undefined;
+};
+
+const Stack = createNativeStackNavigator<RootStack>();
 
 function AppNavigator() {
   return (

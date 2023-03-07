@@ -1,7 +1,13 @@
+import { NativeStackScreenProps } from "@react-navigation/native-stack";
 import React from "react";
 import { Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
+import { RootStack } from "../../App";
 
-const SCREENS_PATHS = [
+type ScreenPaths = {
+  path: keyof RootStack;
+};
+
+const SCREENS_PATHS: ScreenPaths[] = [
   {
     path: "Notification",
   },
@@ -10,7 +16,9 @@ const SCREENS_PATHS = [
   },
 ];
 
-export default function Home({ navigation }) {
+type HomeProps = NativeStackScreenProps<RootStack, "Home">;
+
+export default function Home({ navigation }: HomeProps) {
   return (
     <ScrollView style={styles.container}>
       {SCREENS_PATHS.map(p => (
