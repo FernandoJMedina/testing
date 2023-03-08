@@ -14,6 +14,9 @@ const SCREENS_PATHS: ScreenPaths[] = [
   {
     path: "Biometrics",
   },
+  {
+    path: "Blur",
+  },
 ];
 
 type HomeProps = NativeStackScreenProps<RootStack, "Home">;
